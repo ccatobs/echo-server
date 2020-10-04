@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: master
+    branches: main
 
 env:
   TAG: gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/${{ github.event.repository.name }}:latest
