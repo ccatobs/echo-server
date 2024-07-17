@@ -16,7 +16,8 @@ func main() {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		w.Write([]byte(dump))
+		log.Print(string(dump))
+		w.Write(dump)
 	})
 
 	log.Fatal(http.ListenAndServe(address, nil))
